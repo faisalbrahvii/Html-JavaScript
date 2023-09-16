@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<label for="">Enter percentage</label>
+<input type="text" id="inp">
+<button onclick="sub()">Submit</button>
+<br><br>
+<div id="main"></div>
+<script>
+    function sub(){
+
+    
+    var inp = document.getElementById("inp").value;
+
+
+    switch() {
+        case (inp>=80 && inp<70):
+            document.getElementById("main").innerHTML = "A+"
+            break;
+            case (inp>=70 && inp<60):
+            document.getElementById("main").innerHTML = "A"
+            break;
+            case (inp>=60 && inp<50):
+            document.getElementById("main").innerHTML = "B"
+            break;
+            case (inp>=50 && inp<40):
+            document.getElementById("main").innerHTML = "C"
+            break;
+            
+            case (inp<50):
+            document.getElementById("main").innerHTML = "A+"
+            break;
+    
+            default:
+            
+            document.getElementById("main").innerHTML = "INVALID VALUE"
+            break;
+            
+        
+    }
+}
+</script>
+
+    
+</body>
+</html>

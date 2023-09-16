@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crads</title>
+    <link rel="stylesheet" href="bootstrap-4.5.3-dist/css/bootstrap.min.css">
+</head>
+<body>
+   
+<div class="container">
+    <div class="row" >
+
+    </div>
+</div>
+
+<script>
+
+
+var obj = [
+    {name:"Bulb 1", des : "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, architect", image:"images/1.webp"},
+    {name:"Bulb 2", des : "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, architect", image:"images/b2.png"},
+    {name:"Bulb 3", des : "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, architect", image:"images/b3.jpeg"},
+    {name:"Bulb 4", des : "    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, architect", image:"images/b4.webp"},
+    
+];
+var r = document.querySelector(".row");
+for(var i = 0 ; i <=obj.length; i++){
+    r.innerHTML += '<div class="col-md-3"><div class="card"><img src="'+obj[i].image+'" alt="" class="card-img-top"><div class="card-body"><h3 class="card-title">'+obj[i].name+'</h3><p class="card-text">'+obj[i].des+'</p> </div></div> </div>'
+
+
+
+
+}
+
+</script>
+
+ 
+
+</body>
+</html>

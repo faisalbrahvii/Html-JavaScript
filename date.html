@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.5.1.min.js"></script>
+</head>
+<body>
+       <form action="">
+        <label for="">Date</label>
+        <input type="date" id="mydate">
+        <button type="button" id="submit">Submit</button>
+       </form>
+
+       <!-- <script>
+        $(document).ready(function(){
+            $('#submit').on('click', function(){
+  var date = new Date($('#mydate').val());
+  var day = date.getDate();
+  var month = date.getMonth() + 1;
+  var year = date.getFullYear();
+  alert([day, month, year].join('/'));
+});
+        })
+       </script> -->
+
+<script>
+    var day, month, year;
+
+$('#submit').on('click', function() {
+  var date = $('#mydate').val().split("-");
+    // console.log(date, $('#mydate').val())
+  day = date[2];
+  month = date[1];
+  year = date[0];
+  alert(day + " " + month + " " +year);
+});
+</script>
+
+</body>
+</html>

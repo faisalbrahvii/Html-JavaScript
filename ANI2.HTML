@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .MAIN{
+            height: 200px;
+            width: 300px;
+            border: 2px solid black;
+            margin: 0 auto;
+            /* line-height: 100px; */
+        }
+        ul{
+            margin-top: 100px;
+        }
+    li{
+            display: inline;
+            height: 100px !important; 
+            width: 100px !important;
+           
+             padding: 10px;
+            margin: 10px; 
+            border-radius: 100px;
+            /* line-height: 10; */
+            /* margin-top: 100px; */
+            /* animation: ani 2s ease infinite; */
+            animation-name: ani;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            /* list-style-type: circle; */
+        }
+
+            @keyframes ani{
+                0%{
+transform: translateY(0px);
+
+                }
+                50%{
+transform: translateY(-200px);
+
+                }
+               100%{
+transform: translateY(0px);
+
+                }
+                
+            }
+        
+        li:nth-child(1){
+            background-color: yellow;
+            animation-delay: 0.2s;
+        }
+        li:nth-child(2){
+            background-color: maroon;
+            animation-delay: 0.3s;
+        }
+        li:nth-child(3){
+            background-color: rgb(14, 125, 125);
+            animation-delay: 0.4s;
+        }
+        li:nth-child(4){
+            background-color: brown;
+            animation-delay: 0.3s;
+        }
+        li:nth-child(5){
+            background-color: green;
+            animation-delay: 0.1s;
+        }
+ul{
+    /* border-bottom: 10px solid black; */
+}
+
+    </style>
+</head>
+<body>
+    
+
+
+    <div class="MAIN">
+
+
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+</body>
+</html>

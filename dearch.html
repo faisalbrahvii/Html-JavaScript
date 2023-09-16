@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searching</title>
+</head>
+<body>
+    <label for="">Search here </label>
+    <input type="text" id="main">
+    <button onclick="s()">Search here</button>
+  <div class="container">
+    <div class="row">
+    
+    </div>
+  </div>
+     
+
+<script>
+
+
+
+var abc = [
+    {name:"led bulb",image:"images/b2.png",price:"45000"},
+{name:"dawlance bulb",image:"images/b3.jpeg",price:"45000"},
+{name:"orient bulb",image:"images/b4.webp",price:"45000"}];
+function s(){
+    var inp = document.getElementById("main").value;
+for(var i = 0 ; i<=abc.length; i++){
+var  kk = abc.filter((xyz, ind)=>{
+  if(xyz.name.toLowerCase().includes(inp.toLowerCase())){
+    document.querySelector(".row").innerHTML = `  <div class="col-md-4">  <div class="card">
+            <img class="card-img-top" src="`+xyz.image+`" alt="">
+            <div class="card-body">
+                <h4 class="card-title">`+xyz.name+`</h4>
+                <p class="card-text">`+xyz.price+`</p>
+            </div></div>
+        </div>`
+
+  }
+})
+
+
+}}
+
+
+</script>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marksheet</title>
+    <style>
+    #tab{
+        position: relative;
+        left:470px;
+        top: -290px;
+        font-size: 25px;
+    }
+
+    label, button, input{ 
+        font-size: 25px;
+    }
+
+    td, th{
+        text-align: center;
+        width: 180px;
+        height: 60px;
+    }
+
+    h4{
+        font-size: 25px;
+        text-align: justify;
+        display: inline;
+    }
+
+    span{
+      border-bottom: 1px solid rgb(27, 27, 27);
+      height: 40px;
+    }
+    
+    </style>
+</head>
+<body>
+    
+    <label for="">Maths:</label>
+    <input type="text" id="inp1">
+    <br><br>
+    <label for="">Physics:</label>   
+    <input type="text" id="inp2">
+    <br><br>
+    <label for="">English:</label>
+    <input type="text" id="inp3">
+    <br><br>
+    <label for="">Urdu:</label>
+    <input type="text" id="inp4">
+    <br><br>
+    <label for="">Islamiyat:</label>
+    <input type="text" id="inp5">
+    <br><br>
+    <button id="sum" type="submit" onclick="fun()">Submit</button>
+
+    <div id="tab">
+        <table border="1">
+            <thead>
+                <th>Subjects</th>
+                <th>Total Marks</th>
+                <th>Obtain Marks</th>
+            </thead>
+            <tr>
+                <td>Maths</td>
+                <td>100</td>
+                <td id="mt"></td>
+            </tr>
+            <tr>
+                <td>Physics</td>
+                <td>100</td>
+                <td id="phy"></td>
+            </tr>
+            <tr>
+                <td>English</td>
+                <td>75</td>
+                <td id="eng"></td>
+            </tr>
+            <tr>
+                <td>Urdu</td>
+                <td>75</td>
+                <td id="ur"></td>
+            </tr>
+            <tr>
+                <td>Islamiyat</td>
+                <td>75</td>
+                <td id="isl"></td>
+            </tr>
+            <tr>
+                <td style="border-color: transparent;"></td>
+                <td id=""></td>
+            </tr>
+        </table>
+        <br>
+        <div id="mi"><h4>Total Obtained Marks = </h4>
+   <strong id="tom"></strong>
+            <br><br>
+            <h4>Percentage = </h4><span id="per"></span>
+            <br><br>
+            <h4>Grade= </h4><span id="grd"></span>
+        </div>
+    </div>
+
+    <script>
+
+         function fun(){
+        var mat = parseInt(document.getElementById("inp1").value);
+        var ph = parseInt(document.getElementById("inp2").value);
+        var en = parseInt(document.getElementById("inp3").value);
+        var ud = parseInt(document.getElementById("inp4").value);
+        var ilt = parseInt(document.getElementById("inp5").value);
+    
+          document.getElementById("mt").innerHTML = mat;
+          document.getElementById("phy").innerHTML    = ph;
+          document.getElementById("eng").innerHTML = en;
+          document.getElementById("ur").innerHTML = ud;
+          document.getElementById("isl").innerHTML = ilt;
+
+          var total = (mat+ph+en+ud+ilt);
+          document.getElementById("tom").innerHTML=total;
+          var per = total/500*100;
+          document.getElementById("per").innerHTML=per;
+        
+         }
+    </script>
+</body>
+</html>
+
+

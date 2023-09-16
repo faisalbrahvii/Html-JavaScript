@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage</title>
+</head>
+<body>
+
+    <label for="">Name</label>
+    <input type="text" name="" id="n">
+    <br>
+    <br>
+    <label for="">Password</label>
+    <input type="text" id="pass">
+    <br><br>
+    <button type="submit" onclick="st()">Submit</button>
+
+
+
+    <h1>Login</h1>
+    <label for="">Name</label>
+    <input type="text" name="" id="name">
+    <br>
+    <br>
+    <label for="">Password</label>
+    <input type="text" id="password">
+    <br><br>
+    <button type="submit" onclick="login()">login</button>
+<h2 id="h"></h2>
+    <script>
+        function st(){
+ var n = document.getElementById("n").value;
+ var p = document.getElementById("pass").value;
+ localStorage.setItem("Name",n);
+//  document.getElementById("h").innerHTML = localStorage.getItem("Name");
+localStorage.setItem("pass",p)
+
+
+        }
+function login(){
+
+    var na = document.getElementById("name").value;
+    var pas = document.getElementById("password").value;
+    if(na==localStorage.getItem("Name")  && pas == localStorage.getItem("pass")){
+
+alert("successfully login");
+
+    }
+}
+
+
+    </script>
+</body>
+</html>

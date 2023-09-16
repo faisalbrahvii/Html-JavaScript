@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+    </script>
+
+    <input type="text" value="Search" id="inp">
+    <button onclick="fun()">Submit</button>
+    <div id="main"></div>
+
+
+
+
+    <script>
+        function fun(){
+         var a = document.getElementById("inp").value;
+         for(var i=1;i<=10;i++){
+            document.getElementById("main").innerHTML += i*a+"<br>";
+         }   
+        }
+
+
+
+
+
+
+        // function fun(){
+        //     var inp = document.getElementById("inp").value
+        // switch (inp) {
+        //     case "day1":
+
+        //     document.getElementById("main").innerHTML = "Biyani"
+        //         break;
+        //     case "day2":
+        //     document.getElementById("main").innerHTML = "Meat"
+        //         break;
+        //     case "day3":
+        //     document.getElementById("main").innerHTML = "vegetable"
+        //         break;
+
+        //     default:
+        //     document.getElementById("main").innerHTML = "Nothing"
+        //         break;
+        // }
+        // }
+    //     function fun(){
+    //         var a = document.getElementById("inp").value;
+    //     for(var i = 1;i<=10;i++){
+    //       document.getElementById("main").innerHTML += i*a+"<br>";
+    //     }
+    // }
+    // for(var i = 1 ; i<=10 ; i++){
+    //     var o = "2"*i;
+    //     document.write(o)
+    // }
+    </script>
+
+</body>
+
+</html>

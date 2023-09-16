@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email</title>
+</head>
+<body>
+    
+<form action="">
+<label for="">Email</label>
+<input type="email" id="em">
+<span id="sp"></span>
+<br>
+<br>
+<button type="button" onclick="fun()">submit</button>
+
+
+
+</form>
+ <script>
+     
+     function fun(){
+
+var inp = document.getElementById("em").value;
+var re = /^[\w]+@[A-Za-z]{4,5}[.]{1}[A-Za-z]{3,}$/
+if(!inp){
+    document.getElementById("sp").innerHTML = "plz filled this field";
+}
+else if(!re.test(inp)){
+    document.getElementById("sp").innerHTML = "not valid";
+    
+}
+else{
+    document.getElementById("sp").innerHTML = "valid";
+
+}
+
+
+     }
+
+
+    </script>
+</body>
+</html>
